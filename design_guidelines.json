@@ -1,0 +1,252 @@
+{
+  "project_name": "MEDBUILDS by Rotstruck",
+  "app_type": "landing_page",
+  "archetype": "ORGANIC & CLINICAL LUXURY (Light Theme Healthcare)",
+  "design_philosophy": {
+    "core_principle": "Light theme only. Visually luxurious, calm, frosted glass, healthcare-appropriate elegance with layered multi-device product storytelling.",
+    "theme_mode": "light",
+    "strict_forbidden_elements": [
+      "Dark backgrounds, dark blue, navy, or black hero sections",
+      "Purple gradient AI-style look",
+      "Orange or red major accent elements",
+      "Pure black (#000000) text",
+      "Unstyled flat default Vercel/Stripe cards",
+      "Inter or Space Grotesk font for headings",
+      "Centering everything vertically/horizontally without grid structure",
+      "Opaque heavy dark overlays"
+    ]
+  },
+  "colors": {
+    "backgrounds": {
+      "page_base": "#F7FCFF",
+      "section_alt_1": "#F1FAFF",
+      "section_alt_2": "#EAF8FF",
+      "surface_highlight": "#DFF7FF",
+      "accent_surface": "#D5F3FF"
+    },
+    "gradients": {
+      "hero_accent": "linear-gradient(135deg, #8DE9FF 0%, #52D2F7 50%, #74D8FF 100%)",
+      "card_hover": "linear-gradient(135deg, #C7F4FF 0%, #91EAFF 50%, #69D8F8 100%)",
+      "badge_glow": "linear-gradient(135deg, #A9EEFF 0%, #66DBFA 50%, #8BE4FF 100%)",
+      "glass_border": "linear-gradient(135deg, rgba(141, 233, 255, 0.6), rgba(82, 210, 247, 0.2))",
+      "subtle_orb_1": "radial-gradient(circle at 30% 20%, rgba(141, 233, 255, 0.35) 0%, rgba(247, 252, 255, 0) 70%)",
+      "subtle_orb_2": "radial-gradient(circle at 80% 60%, rgba(105, 216, 248, 0.25) 0%, rgba(241, 250, 255, 0) 65%)"
+    },
+    "text": {
+      "heading_primary": "#0F172A",
+      "heading_secondary": "#1E293B",
+      "body_primary": "#334155",
+      "body_muted": "#475569",
+      "caption_slate": "#5A738E",
+      "accent_cyan_dark": "#0284C7"
+    },
+    "borders": {
+      "glass_subtle": "rgba(186, 230, 253, 0.6)",
+      "glass_bright": "rgba(56, 189, 248, 0.4)",
+      "card_divider": "rgba(224, 242, 254, 0.8)"
+    },
+    "status_pills": {
+      "stable": {
+        "bg": "#E0F2FE",
+        "text": "#0369A1",
+        "border": "#BAE6FD"
+      },
+      "observe": {
+        "bg": "#FEF3C7",
+        "text": "#B45309",
+        "border": "#FDE68A"
+      },
+      "critical": {
+        "bg": "#FFE4E6",
+        "text": "#E11D48",
+        "border": "#FECDD3"
+      }
+    }
+  },
+  "typography": {
+    "font_families": {
+      "heading": "Outfit, sans-serif",
+      "body": "Manrope, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "font_imports": "@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');",
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight",
+      "h3": "text-2xl sm:text-3xl font-semibold tracking-tight",
+      "h4": "text-xl sm:text-2xl font-semibold",
+      "body": "text-base sm:text-lg text-slate-600 leading-relaxed",
+      "small": "text-sm text-slate-5-00 font-medium",
+      "overline": "text-xs uppercase font-bold tracking-[0.2em] text-cyan-600"
+    }
+  },
+  "layout_and_spacing": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "section_padding": "py-20 lg:py-28",
+    "glass_card_padding": "p-6 sm:p-8 lg:p-10",
+    "bento_grid_gap": "gap-6 sm:gap-8",
+    "border_radius": {
+      "card": "rounded-3xl",
+      "pill": "rounded-full",
+      "button": "rounded-2xl",
+      "input": "rounded-xl"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "header": "backdrop-blur-xl bg-white/80 border-b border-cyan-100/60 shadow-[0_4px_20px_rgba(2,132,199,0.04)]",
+      "card_standard": "backdrop-blur-xl bg-white/75 border border-cyan-200/50 shadow-[0_10px_40px_rgba(2,132,199,0.06)] hover:shadow-[0_20px_50px_rgba(2,132,199,0.12)] hover:-translate-y-1 transition-all duration-300",
+      "flash_card": "backdrop-blur-2xl bg-white/90 border border-cyan-300/60 shadow-[0_15px_35px_rgba(14,165,233,0.15)]",
+      "highlight_card": "backdrop-blur-2xl bg-gradient-to-br from-white/90 via-cyan-50/50 to-white/90 border-2 border-cyan-300 shadow-[0_15px_45px_rgba(2,132,199,0.15)]"
+    },
+    "animations": {
+      "float": "animate-float (custom keyframe floating Y -8px to 8px over 5s ease-in-out infinite)",
+      "pulse_glow": "animate-pulse (subtle pulse on live vitals indicators)",
+      "ecg_line": "custom stroke-dashoffset SVG path animation representing active heartbeat",
+      "scroll_reveal": "framer-motion opacity:0 to 1, y: 20 to 0 transition"
+    }
+  },
+  "sections_breakdown": [
+    {
+      "section_id": "header",
+      "name": "Sticky Glass Header",
+      "requirements": [
+        "MEDBUILDS logo badge + 'by Rotstruck' sub-branding pill",
+        "Nav links: Platform, Workspaces, Patient Journey, Analytics, Pricing, Contact",
+        "CTA Button: 'Book a demo' with cyan gradient glow hover",
+        "Mobile responsive drawer menu with glass backdrop",
+        "Must have data-testid on logo, links, and CTA button"
+      ]
+    },
+    {
+      "section_id": "hero",
+      "name": "Hero Section",
+      "requirements": [
+        "Left Column: Eyebrow pills ('Hospital management made smarter', 'EMR + OPD + IPD + Billing', 'Built for Indian hospitals')",
+        "Headline: 'See your entire hospital on one intelligent screen.'",
+        "Subtitle & Credibility pills (ABDM compliant, 99.9% Uptime, NABH ready)",
+        "CTAs: 'Book a live demo' (Primary cyan gradient button), 'Explore platform' (Glass outline button)",
+        "Right Column - Layered Multi-Device Mockup:",
+        "1. Main Laptop Mockup: Admin Dashboard with left sidebar, stat cards (Total Patients, Appointments Today, Beds Occupied, Revenue Today), charts (appointment trends, bed occupancy ring, revenue trend), recent patients table",
+        "2. Tablet Overlay Mockup: Ward / Bed Management grid (bed numbers, patient names, status pills: Stable, Observe, Critical)",
+        "3. Phone Overlay Mockup: Patient Timeline (MRN, admitted badge, timeline events: Registered, Consultation done, Lab ordered, Vitals recorded, Discharge pending)",
+        "4. Floating Glass Flash Cards: Heart Rate 78 bpm with animated ECG line, ICU Monitoring card, Beds Occupied 73.6%, SpO2 97%"
+      ]
+    },
+    {
+      "section_id": "product_overview",
+      "name": "Product Overview",
+      "requirements": [
+        "Heading: 'One calm system for the complete hospital journey.'",
+        "4 Glass Feature Cards: 1. Connected departments (OPD, IPD, Pharmacy, Lab), 2. Live operational intelligence (Real-time vitals & beds), 3. Designed for Indian hospitals (GST billing, ABDM integration), 4. Scales with growth (Single clinic to multi-specialty chains)"
+      ]
+    },
+    {
+      "section_id": "role_workspaces",
+      "name": "Role-Based Workspaces",
+      "requirements": [
+        "Heading: 'Different workspaces, one source of truth.'",
+        "2x2 Grid of Workspaces:",
+        "1. Admin Command Center (KPI overview, staff allocation, revenue breakdown)",
+        "2. Doctor Workspace (Quick prescription builder, patient history timeline, lab orders)",
+        "3. Receptionist Portal (Queue management, fast registration, token generator)",
+        "4. Staff Nurse Vitals Panel (Bed-side telemetry, medicine tracker, alert system)",
+        "Each card includes bullet features + mini embedded UI mockup preview tab"
+      ]
+    },
+    {
+      "section_id": "patient_journey",
+      "name": "Patient Journey",
+      "requirements": [
+        "Heading: 'From appointment to discharge, every touchpoint stays connected.'",
+        "Split Layout:",
+        "Left Side: 8-Step Connected Interactive Vertical Timeline (Appointment booked -> Patient registered -> Doctor consultation -> Digital prescription -> Bed assigned -> Vitals recorded -> Billing prepared -> Checkout completed)",
+        "Right Side: Live Interactive Patient Status Card (Patient details, ward/bed, attending doctor, admitted badge, real-time activity log)"
+      ]
+    },
+    {
+      "section_id": "analytics",
+      "name": "Analytics & Insights",
+      "requirements": [
+        "Heading: 'Turn hospital data into everyday decisions.'",
+        "Left Side: Analytics Dashboard Mockup with KPI cards (Patients Today, Avg Wait Time, Bed Occupancy %, Department Efficiency), department performance bar chart, quality metrics table",
+        "Right Side: High-converting copy + 4 business value bullet points (Zero paperwork lag, Audit-ready reports, Revenue leakage prevention, Operational predictability)"
+      ]
+    },
+    {
+      "section_id": "pricing",
+      "name": "Pricing",
+      "requirements": [
+        "Heading: 'Plans that grow with your facility.'",
+        "Monthly / Annual billing toggle (Save 20% badge)",
+        "3 Tier Cards: 1. Clinic (for single practitioner setups), 2. Hospital ('Most Popular' featured card with bright cyan glass highlight & priority badge), 3. Enterprise (multi-location hospital networks)",
+        "Detailed feature list with checks, clear CTA on each card"
+      ]
+    },
+    {
+      "section_id": "why_medbuilds",
+      "name": "Why MEDBUILDS",
+      "requirements": [
+        "Heading: 'Built to feel more premium, more usable, and more hospital-aware.'",
+        "3 Value Cards: 1. Workflow First (Designed by clinicians, zero unnecessary clicks), 2. Visual Confidence (Calm interface, zero cognitive overload), 3. Stronger Storytelling (Clear patient narrative across departments)"
+      ]
+    },
+    {
+      "section_id": "security_integrations",
+      "name": "Security & Ecosystem",
+      "requirements": [
+        "Heading: 'Secure, standards-aware, and ready to connect.'",
+        "3 Cards: Controlled access (Role-based permissions & audit trails), Connected ecosystem (HL7/FHIR compliant), Reliable exchange (ABDM & M3 sandbox ready)",
+        "Ecosystem integration badges/pills grid: Laboratory systems, Radiology (PACS), Pharmacy software, Health Insurance portals, Payment gateways, Government portals (ABDM), WhatsApp communication, Medical device IoT"
+      ]
+    },
+    {
+      "section_id": "contact_demo",
+      "name": "Contact / Demo CTA",
+      "requirements": [
+        "Heading: 'Ready to make your hospital feel more connected?'",
+        "2-Column Layout:",
+        "Left Side: Persuasive copy + Frosted Glass benefit card (Fewer silos, Faster workflows, Clearer decisions, Better patient experience)",
+        "Right Side: Interactive Demo Request Form (Facility Type select: Hospital/Clinic, Full Name, Role, City, Email, Phone/WhatsApp, Primary Operational Challenge, Submit CTA button 'Schedule my demo')",
+        "Interactive submit state with success modal/toast notification"
+      ]
+    },
+    {
+      "section_id": "footer",
+      "name": "Footer",
+      "requirements": [
+        "Brand block: MEDBUILDS by Rotstruck logo & tagline 'Hospital management made smarter, one connected system at a time.'",
+        "Column navigation: Platform, Solutions, Compliance & Security, Company, Contact",
+        "Trust badges: ABDM M3 Certified, HIPAA Aware, NABH Compliant",
+        "Copyright notice & live system operational status badge ('All Systems Operational')"
+      ]
+    }
+  ],
+  "image_urls": [
+    {
+      "category": "Doctor & Medical Staff Portraits",
+      "url": "https://images.pexels.com/photos/5738735/pexels-photo-5738735.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Female Doctor portrait in modern clinic setting"
+    },
+    {
+      "category": "Doctor & Medical Staff Portraits",
+      "url": "https://images.pexels.com/photos/27298084/pexels-photo-27298084.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Male Doctor with stethoscope portrait"
+    },
+    {
+      "category": "Hospital Ward & Interior",
+      "url": "https://images.unsplash.com/photo-1791092893254-09427ef98d62?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBob3NwaXRhbCUyMGludGVyaW9yJTIwY2xlYW4lMjBsaWdodHxlbnwwfHx8fDE3OTI1MDc2OTZ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Clean modern hospital room with beds and window light"
+    },
+    {
+      "category": "Hospital Corridor",
+      "url": "https://images.pexels.com/photos/21073473/pexels-photo-21073473.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Minimal clean hospital corridor"
+    }
+  ],
+  "testing_and_accessibility": {
+    "data_testid_rule": "Every button, link, tab, input, select, card, modal, and dynamic status element MUST have a unique data-testid attribute in kebab-case format.",
+    "aria_roles": "All interactive elements must have proper aria-labels and keyboard navigation support.",
+    "contrast_guarantee": "Text contrast ratio strictly > 4.5:1 against light cyan/white glass backgrounds."
+  }
+}
