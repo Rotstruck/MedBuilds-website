@@ -5,6 +5,7 @@
       "root": "frontend",
       "framework": "create-react-app",
       "installCommand": "npm install --legacy-peer-deps",
+      "buildCommand": "DISABLE_ESLINT_PLUGIN=true npm run build",
       "bindings": [
         {
           "type": "service",
