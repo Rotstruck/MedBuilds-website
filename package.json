@@ -4,9 +4,9 @@
   "private": true,
   "description": "MEDBUILDS by Rotstruck — Hospital Management & EMR Platform",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
+    "build": "cd frontend && npm install --legacy-peer-deps && npm run build",
     "start": "cd frontend && npm start",
-    "install:frontend": "cd frontend && npm install",
+    "install:frontend": "cd frontend && npm install --legacy-peer-deps",
     "install:backend": "pip install -r backend/requirements.txt"
   }
 }

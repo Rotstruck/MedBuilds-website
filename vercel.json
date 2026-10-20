@@ -4,6 +4,7 @@
     "frontend": {
       "root": "frontend",
       "framework": "create-react-app",
+      "installCommand": "npm install --legacy-peer-deps",
       "bindings": [
         {
           "type": "service",
