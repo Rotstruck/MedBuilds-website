@@ -19,7 +19,7 @@ from backend.email_service import (
     build_admin_notification_html,
     build_user_confirmation_html,
 )
-from api.index import app as vercel_app
+from backend.main import app as vercel_app
 
 
 class TestVercelAndSMTP(unittest.TestCase):
