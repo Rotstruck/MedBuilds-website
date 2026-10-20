@@ -12,7 +12,8 @@ import {
 } from "lucide-react";
 import { Eyebrow, Reveal } from "./Reveal";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "";
+const API = `${BACKEND_URL}/api`;
 
 const gains = [
   { icon: GitBranch, label: "Fewer silos", note: "Departments share one live record" },

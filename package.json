@@ -1,0 +1,12 @@
+{
+  "name": "medbuilds-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MEDBUILDS by Rotstruck — Hospital Management & EMR Platform",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd frontend && npm start",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "pip install -r backend/requirements.txt"
+  }
+}

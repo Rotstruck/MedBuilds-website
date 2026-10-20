@@ -23,13 +23,22 @@ Build a completely new premium SaaS-style landing page for "MEDBUILDS by Rotstru
 
 ## Implemented
 - 2026-10-20: Full landing page — all 10 sections, device mockup composition, floating glass cards with float/ECG/pulse animations, scroll fade-up reveals, sticky glass header with mobile drawer, demo request form persisting to MongoDB with toast + success state, footer with live status badge. Fonts (Outfit/Manrope), title and meta description set in index.html.
+- 2026-10-20: Vercel readiness & SMTP integration:
+  - Added root `vercel.json` with CRA build script, `/api/*` rewrite to Python Serverless Function, and SPA rewrite to `index.html`.
+  - Added `api/index.py` for Vercel Serverless Function runtime.
+  - Added lightweight Vercel requirements (`api/requirements.txt` and root `requirements.txt`).
+  - Added full SMTP email dispatch service (`backend/email_service.py`) with branded HTML templates for internal lead alerts and requester confirmations.
+  - Made MongoDB optional with seamless in-memory fallback to prevent startup/submission crashes when deploying without DB.
+  - Added `GET /api/health` and `POST /api/test-email` endpoints.
+  - Fixed frontend API URL fallback (`REACT_APP_BACKEND_URL || ""`) in `Contact.jsx`.
+  - Added `.env.example` and `VERCEL_DEPLOYMENT.md` deployment guide.
 
 ## Verification Done
 - curl: `GET /api/` OK; `POST /api/demo-requests` returns success+id; `GET /api/demo-requests` returns stored record.
 - Screenshots at 1366/768/375px across hero, workspaces, journey, pricing, contact; form submitted via UI → success panel + toast confirmed.
+- Automated tests in `tests/test_api_and_smtp.py` passing 11/11 tests (health check, demo request validation, in-memory store, SMTP config parsing, admin/user email HTML generation, mocked SMTP send, error resilience).
 
 ## Backlog
-- P1: Email notification on new demo request (Resend integration)
 - P1: Admin view page for demo requests (or simple auth-protected list)
 - P2: SEO deep setup (OG image, JSON-LD, sitemap) via farm-seo-setup skill
 - P2: Real customer logos / testimonials strip
