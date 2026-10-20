@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "description": "MEDBUILDS by Rotstruck — Hospital Management & EMR Platform",
-  "engines": {
-    "node": "24.x"
-  },
   "scripts": {
-    "build": "cd frontend && npm install --legacy-peer-deps && DISABLE_ESLINT_PLUGIN=true npm run build",
-    "start": "cd frontend && npm start",
-    "install:frontend": "cd frontend && npm install --legacy-peer-deps",
-    "install:backend": "pip install -r backend/requirements.txt"
+    "build": "cd frontend && yarn build",
+    "start": "cd frontend && yarn start",
+    "test": "cd frontend && yarn test"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
   }
 }
